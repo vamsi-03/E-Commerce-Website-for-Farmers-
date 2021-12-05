@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-color:grey;
+    }
+    .customer{
+        text-align:center;
+        text-decoration-color: orange;
+        font-size: 400%;
+        color:orange;
+    }
+    input:hover{
+                 border: 3px dotted ivory;
+                 box-shadow: 10px 10px 40px black;
+                 padding: 20px;
+                 font-weight: bold;
+    }
+    form{
+        padding: 30px;
+        width: 600px;
+        margin-left: 260px;
+        border-radius: 7px;
+    }
+    form:hover{
+        box-shadow: 18px 18px 80px black;
+        border: 3px dashed rgba(0, 0, 0, 0.452);
+        transition: 1s;
+
+    }
+    h2{
+        font-size: 25px;
+    }
+    </style>
+<body>
+    <div class="container">
+        <div class="customer">
+            <h2>Customers Registration:</h2>
+        </div>
+        <form>
+            <div class="first-name">
+                 <h2>First Name :</h2>
+<input class="form-control" type="text" placeholder="First Name">
+            </div>        
+            <div class="Middle-name">
+                <h2>Middle Name :</h2>
+<input class="form-control" type="text" placeholder="Middle-name">
+           </div>        
+           <div class="Last-Name">
+            <h2>Last Name :</h2>
+<input class="form-control" type="text" placeholder="Last Name">
+       </div>        
+       <div class="Email">
+        <h2>Email :</h2>
+<input class="form-control" type="email" placeholder="john@gmail.com">
+   </div>        
+   <div class="Mobile-Num">
+    <h2>Mobile :</h2>
+<input class="form-control" type="number" placeholder="Phone">
+</div>        
+<div class="Adress">
+    <h2>Adress :</h2>
+<input class="form-control" type="text" placeholder="Adress">
+</div>     
+<button type="button" class="btn btn-primary" style="margin-top: 30px;">submit</button>
+
+        </form>
+
+    </div>
+</body>
+</html>
