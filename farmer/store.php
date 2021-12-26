@@ -62,7 +62,7 @@
 		if(mysqli_query($conn, $sql)){
 			echo "registration successful";
 			echo "<br><br>";
-			echo "<a href='http://localhost/wt-mini-project-master/farmer/farmerlogin.html' target='_self'><button>Click here to Login</button></a>"; 
+			echo "<a href='http://localhost/wt-mini-project-master/farmer/farmerlogin.php' target='_self'><button>Click here to Login</button></a>"; 
 			
 		} else{
 			echo "ERROR: Hush! Sorry $sql. "

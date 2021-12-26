@@ -17,6 +17,7 @@
        margin:auto;
        background-color: aqua;
        position:relative;
+       padding:100px;
        
        }
  
@@ -50,19 +51,41 @@
    
 </style>
 <body>
-    <form action="store1.php" methos="post" action="Sign In">
-        <div class="container">
+   <?php 
+   $conn = mysqli_connect("localhost", "root", "", "farmer") or die("connection failed");
+
+   if(!empty($_POST['save']))
+   {
+       $First_name = $_POST['First_name'];
+       $Password = $_POST['Password'];
+
+       $sql = "select * from register where First_name='$First_name' and Password='$Password'";
+       $result = mysqli_query($conn,$sql);
+       $count = mysqli_num_rows($result);
+       if($count>0)
+       {
+           echo "login successful";
+           header("Location:http://localhost/wt-mini-project-master/farmer/farmerbase/farmerbasepage.html");
+       }
+       else{
+           echo "login not successful";
+       }
+   }
+   ?>
+    <form method="post" >
+        <div class="container" >
             <h2>Farmer Login</h2>
-      <p> <label for="username">Username</label>
-       <input type="text" id="username" name="username">
+      <p> <label for="First_name">Username</label>
+       <input type="text" id="First_name" name="First_name">
 </p>
 <p>
-       <label for="password">Password:</label>
-       <input type="password" id="password" name="password">
+       <label for="Password">Password:</label>
+       <input type="password" id="Password" name="Password">
 </p>
-       <button align:center>Sign In</button>
-    </div></form>
+<input type="submit" name="save" value="Login"/>
+    </form>
     <a>new user?</a>
     <a href="http://localhost/wt-mini-project-master/farmer/farmerregistration.html"><button type="button">Sign Up</button></a>
+</div>
 </body>
 </html>

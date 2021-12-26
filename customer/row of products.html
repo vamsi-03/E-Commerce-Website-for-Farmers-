@@ -1,0 +1,244 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+     body{
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+    ul{
+        position: absolute;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    ul li{
+        list-style: none;
+    }
+    ul li a{
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #262626;
+        transition: .5s;
+        font-weight: bold;
+    }
+    ul li a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top:2px solid black;
+        border-bottom: 2px solid black;
+        transform: scaleY(3);
+        opacity: 0;
+        transition: .5s;
+        z-index: -1;
+    }
+    ul li a:hover::before{
+        transform: scaleY(1.2);
+        opacity: 1;
+    }
+    ul li a::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        transform: scale(0);
+        transition: .5s;
+        z-index: -1;
+    }
+    ul li a:hover::after{
+        transform: scale(1);
+    }
+    ul li a:hover{
+        color: white;
+    }
+img#image{
+height:150px;
+width: 150px;
+}
+div#a,div#b{
+border:1px solid black;
+border-radius:7px;
+margin-left:20px;
+margin-top: 30px;
+margin-bottom:20px;
+padding:20px;
+}
+div#a:hover{
+box-shadow:2px 2px 55px black;
+border-left: 3px solid black;
+border-right: 3px solid black;
+border-top: 0px;
+border-bottom: 0px;
+transition:0.5s;
+}
+div#b:hover{
+   box-shadow:2px 2px 55px black;
+border-left: 2px solid black;
+border-right: 2px solid black;
+transition:1s;
+}
+.row{
+margin-left:15px;
+}
+a.nav-link{
+   padding: 30px;
+   background-color: blue;
+   color: white;
+   border: 1px solid white;
+}
+ul li a {
+  margin-top: 30px;
+}
+.search-box{
+        align-items: center;
+        margin-top: 40px;
+        margin-left: 220px;
+        border-radius: 7px;
+        width: 60%;
+        border: 1px solid black;
+        padding: 10px;
+    }
+    .search-box:hover{
+        box-shadow:  12px 12px 40px rgba(0, 128, 0, 0.205) ;
+        transition: 0.5s;
+    }
+    #img-circle{
+       position: absolute;
+       top: 22px;
+       right: 1150px;
+    }
+    #img-circlee{
+      position: absolute;
+      top:22px;
+      right: 95px;
+    }
+
+</style>
+<body>
+<div class="container">
+   <ul>
+      <li><a href="http://localhost/wt-mini-project-master/start/wtproject.html" style="text-decoration: none;" >Home</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/about.html" style="text-decoration: none;">About</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/vegetables.html#" style="text-decoration: none;">Vegetables</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/fruits.html" style="text-decoration: none;">Fruits</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/milk.html" style="text-decoration: none;">Milk</a> </li>
+      <li><a href="" style="text-decoration: none;">Grains</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/cart.html" style="text-decoration: none;">Cart</a></li>
+</ul>
+  <br><br><br>
+  <div class="search-bar">
+   <input type="text" placeholder="search" class="search-box">
+</div>
+<div class="row">
+<div class="first">
+   <div id="a" class="col-md-2">
+   <img id="image" class="img-circle" width="100px" height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSzELLDlcjtLFfSlwbznFkATiZ_-SAcymmJA&usqp=CAU"><br>
+   <h5 style="text-align:center" ><b>PADDY</b></h5>
+   <div class="buttons" style="text-align:center">
+      <button type="button" class="btn btn-link,btn btn-primary"> Buy Now</button><br><br>
+   <button type="button"  class="btn btn-link,btn btn-info">Wishlist</button>
+</div>
+   </div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP2aCNx9x8SNTg2sGgw55_AwbzZWDx7n63zw&usqp=CAU"><br>
+      <h5 style="text-align:center"><b>COTTON</b></h5>
+   <div class="buttons" style="text-align:center">
+      <button type="button" class="btn btn-link,btn btn-primary"> Buy Now</button><br><br>
+   <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+</div>
+</div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""text-align:center" ><b>TOMATO</b></h5>
+   <div class="buttons" style="text-align:center">
+      <button type="button" class="btn btn-link,btn btn-primary"> Buy Now</button><br><br>
+   <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+</div>
+</div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""><br>
+      <h5 style="text-align:center" ><b>ONIONS</b></h5>
+   <div class="buttons" style="text-align:center">
+      <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+   <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+</div>
+</div>
+   <div id="b" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""><br>
+      <h5 style="text-align:center"><b>CARROT</b></h5>
+   <div class="buttons" style="text-align:center">
+      <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+   <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+</div>
+</div>
+<div class="second">
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTerpUOCwDSjl8jh6NJUAJKqyLWFxygUgDAug&usqp=CAU"><br>
+      <h5 style="text-align:center" ><b>BEET ROOT</b></h5>
+      <div class="buttons" style="text-align:center">
+         <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+      <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+   </div>
+   </div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""><br>
+      <h5 style="text-align:center" ><b>ORANGE</b></h5>
+      <div class="buttons" style="text-align:center">
+         <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+      <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+   </div>
+   </div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""><br>
+      <h5 style="text-align:center" ><b></b></h5>
+      <div class="buttons" style="text-align:center">
+         <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+      <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+   </div>
+   </div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""><br>
+      <h5 style="text-align:center" ><b></b></h5>
+      <div class="buttons" style="text-align:center">
+         <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+      <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+   </div>
+   </div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""><br>
+      <h5 style="text-align:center" ><b></b></h5>
+      <div class="buttons" style="text-align:center">
+         <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+      <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+   </div>
+   </div>
+   <div id="a" class="col-md-2">
+      <img id="image" class="img-circle" width="100px" height="100px" src=""><br>
+      <h5 style="text-align:center" ><b></b></h5>
+      <div class="buttons" style="text-align:center">
+         <button type="button" class="btn btn-link,btn btn-primary">Buy Now</button><br><br>
+      <button type="button" class="btn btn-link,btn btn-secondary">Wishlist</button>
+   </div>
+   </div>
+</div>
+</div>
+<img class="img-circle" id="img-circle" src="https://www.bing.com/th?id=OIP.gJu5SZiie08D0FDaedTbLAAAAA&w=113&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" width="130px" height="130px" style="overflow:visible;">
+<img class="img-circle" id="img-circlee" src="https://www.bing.com/th?id=OIP.gJu5SZiie08D0FDaedTbLAAAAA&w=113&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" width="130px" height="130px" style="overflow:visible;">
+</div>
+</body>
+</html>

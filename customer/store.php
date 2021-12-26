@@ -30,7 +30,7 @@
 		}
 		button:hover
 		{
-			box-shadow:10px;
+			box-shadow:2px;
 
 		}
 		</style>
@@ -39,7 +39,7 @@
 		<?php
 
 		
-		$conn = mysqli_connect("localhost", "root", "", "farmer");
+		$conn = mysqli_connect("localhost", "root", "", "customer");
 		
 		// Check connection
 		if($conn === false){
@@ -48,16 +48,20 @@
 		}
 		
 		// Taking all 5 values from the form data(input)
-		$username = $_REQUEST['username'];
-		$password = $_REQUEST['password'];
-	
+		$First_name = $_REQUEST['firstname'];
+		$Last_name = $_REQUEST['lastname'];
+		$Phone_no = $_REQUEST['phoneno'];
+		$Email = $_REQUEST['Email'];
+        $Password = $_REQUEST['Password'];
 		// Performing insert query execution
 		// here our table name is college
-		$sql = "INSERT INTO login VALUES ('$username','$password')";
+		$sql = "INSERT INTO register VALUES ('$First_name',
+			'$Last_name','$Phone_no','$Email','$Password')";
 		
 		if(mysqli_query($conn, $sql)){
 			echo "registration successful";
 			echo "<br><br>";
+			echo "<a href='http://localhost/wt-mini-project-master/customer/customerlogin.php' target='_self'><button>Click here to Login</button></a>"; 
 			
 		} else{
 			echo "ERROR: Hush! Sorry $sql. "

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    ul{
+        position: absolute;
+        top: 10%;
+        left: 48%;
+        transform: translate(-50%,-50%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    ul li{
+        list-style: none;
+    }
+    ul li a{
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #262626;
+        transition: .5s;
+        font-weight: bold;
+    }
+    ul li a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top:2px solid #000;
+        border-bottom: 2px solid #000;
+        transform: scaleY(2);
+        opacity: 0;
+        transition: .5s;
+        z-index: -1;
+    }
+    ul li a:hover::before{
+        transform: scaleY(1.35);
+        opacity: 1;
+    }
+    ul li a::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        transform: scale(0);
+        transition: .5s;
+        z-index: -1;
+    }
+    ul li a:hover::after{
+        transform: scale(1);
+    }
+    ul li a:hover{
+        color: white;
+    }
+    #about-information{
+        padding: 60px;
+        text-align: center;
+        border: 1px solid ivory;
+        box-shadow: 10px 10px 60px grey;
+        border-radius: 7px;
+        margin-bottom: 50px;
+    }
+    #about-information:hover{
+        box-shadow: 10px 10px 80px goldenrod;
+        transition: 2s;
+        background-color: black;
+        color: ivory;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <ul>
+      <li><a href="http://localhost/wt-mini-project-master/customer/row%20of%20products.html" style="text-decoration: none;" >Home</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/about.html" style="text-decoration: none;">About</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/vegetables.html#" style="text-decoration: none;">Vegetables</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/fruits.html" style="text-decoration: none;">Fruits</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/milk.html" style="text-decoration: none;">Milk</a> </li>
+      <li><a href="" style="text-decoration: none;">Grains</a> </li>
+      <li><a href="http://localhost/wt-mini-project-master/customer/cart.html" style="text-decoration: none;">Cart</a></li>
+</ul>
+  <br><br><br><br><br>
+    <div id="about-information" >
+        <h4>
+            In a planet ravaged by the COVID-19 epidemic, demand for safe and healthy<br><br>
+            food is now on the rise, making it an ideal time to seize a win-win scenario<br><br>
+            for farmers, buyers, and the environment.<br><br>
+            Changes have also occurred in the local food chain. Despite the fact that many<br><br>
+            farmers have faced hardships as a result of restaurant and market<br><br> 
+            shutdown or prohibitions, there is undeniably an increasing demand for<br><br>
+            fresh items from local sources. Consider developing a buying or selling organic<br><br> 
+            food ecommerce marketplace for farmers and suppliers to enable local producers interact<br><br>
+            directly with customers or restaurants (B2B agriculture marketplace).<br><br>
+            During the epidemic, many farmers chose to go digital to overcome challenges<br><br>
+            and improve their businesses using ecommerce app development companies.<br><br> 
+            This article is created for the producers who have decided to go online<br><br>
+            in order to increase sales volume. This blog covers everything an entrepreneur<br><br>
+            (who may or may not be a farmer) needs to know about creating an online producers’<br><br>
+             marketplace, from the business concept to the must-have elements.<br><br>
+    
+        </h4>
+    </div>
+    
+    </div>
+</body>
+</html>

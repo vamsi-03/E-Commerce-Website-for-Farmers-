@@ -74,24 +74,41 @@
     }
 </style>
 <body>
-       <div class="login">
-        <div class="container">
-            <button type="submit" id="btn" class="btn btn-primary" >submit</button>
-            <div class="username">
-                <i class="fas fa-user" style="font-size: 70px;color: white;"></i><br><br>
-                <input type="text" id="username1" style="border-radius: 7px;margin-top: 10px;border: 1px solid grey;padding: 5px;" placeholder="Customer Id"><br>
-                <input type="password" id="password" style="border-radius: 7px;margin-top: 10px; border: 1px solid grey;padding: 5px;" placeholder="password">
-        <div class="sign-in">
-            <button class="button1" type="button">
-                <a href="" style="text-decoration: none; color:white ;" ><h3>Sign-In</h3> </a>
-            </button>
-        </div>
-        <div class="Create-Account">
-            <button class="button2" type="button" >
-        <a href="http://localhost/wt-mini-project-master/customer/customerlogin.html" style="text-decoration: none; color: white;" ><h3>Sign-Up</h3> </a>
-            </button>
-        </div>
-       </div>
-    </div>
-</body>
-</html>
+    <?php 
+    $conn = mysqli_connect("localhost", "root", "", "customer") or die("connection failed");
+ 
+    if(!empty($_POST['save']))
+    {
+        $First_name = $_POST['First_name'];
+        $Password = $_POST['Password'];
+ 
+        $sql = "select * from register where First_name='$First_name' and Password='$Password'";
+        $result = mysqli_query($conn,$sql);
+        $count = mysqli_num_rows($result);
+        if($count>0)
+        {
+            echo "login successful";
+            header("Location:http://localhost/wt-mini-project-master/customer/row%20of%20products.html");
+        }
+        else{
+            echo "login not successful";
+        }
+    }
+    ?>
+     <form method="post" >
+         <div class="container" >
+             <h2>Customer Login</h2>
+       <p> <label for="First_name">Username</label>
+        <input type="text" id="First_name" name="First_name">
+ </p>
+ <p>
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" name="Password">
+ </p>
+ <input type="submit" name="save" value="Login"/>
+     </form>
+     <a>new user?</a>
+     <a href="http://localhost/wt-mini-project-master/customer/customeregistration.html"><button type="button">Sign Up</button></a>
+ </div>
+ </body>
+ </html>
