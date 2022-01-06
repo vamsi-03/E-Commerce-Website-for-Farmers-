@@ -13,3 +13,6 @@ The customers like retailers,wholesalers can able to contact the customer in ord
 <li>customer can visit various tabs for products like milk,vegetables,grains etc</li>
 <li>customer can have the ability to add products he want into the cart</li>
 <li>checkout page(not implemented)</li>
+  </ol>
+ <h2>Here you can see the presentation related to the project</h2>
+ <a href="https://github.com/vamsi-03/project">Ecommerce website for farmers</a>
