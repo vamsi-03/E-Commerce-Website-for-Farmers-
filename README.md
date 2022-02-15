@@ -8,7 +8,7 @@ The customers like retailers,wholesalers can able to contact the customer in ord
 <li>login page  and signup page for customers</li>
 <li>login page and signup page for farmers</li>
 <li>DataBase validations for both login and signup pages</li>
-<li>farmer can able to upload his product directly into database(not included yet></li>
+<li>farmer can able to upload his product directly into database(not included yet)</li>
 <li>Farmer can view his uploaded products(not implemented yet)</li>
 <li>customer can visit various tabs for products like milk,vegetables,grains etc</li>
 <li>customer can have the ability to add products he want into the cart</li>
